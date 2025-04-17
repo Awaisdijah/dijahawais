@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Dancing Script', cursive;
+    background: linear-gradient(to bottom, #FFD1DC, #E6E6FA);
+    color: #333;
+    text-align: center;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 900px;
+    padding: 30px;
+}
+
+.intro {
+    font-size: 28px;
+    color: #C71585;
+    margin: 20px 0;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.1);
+    z-index: 1;
+    position: relative;
+}
+
+h1, h2 {
+    font-family: 'Great Vibes', cursive;
+    color: #C71585;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    z-index: 1;
+    position: relative;
+}
+h1 { font-size: 4em; margin-bottom: 30px; }
+h2 { font-size: 2.5em; }
+
+.photo {
+    width: 450px;
+    height: 450px;
+    border-radius: 50%;
+    border: 10px solid #FF69B4;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    margin: 20px auto;
+    object-fit: cover;
+    z-index: 1;
+    position: relative;
+}
+
+.mood-buttons, .fortune-cards {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
+    margin: 20px 0;
+    z-index: 1;
+    position: relative;
+}
+
+.mood-button, #poem-button, .fortune-card {
+    background-color: #FF69B4;
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 25px;
+    font-size: 1.1em;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s, box-shadow 0.2s;
+    z-index: 1;
+    position: relative;
+}
+.mood-button:hover, #poem-button:hover, .fortune-card:hover {
+    background-color: #C71585;
+    transform: scale(1.1);
+    box-shadow: 0 0 15px rgba(255, 105, 180, 0.5);
+}
+
+#musicToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    z-index: 10;
+    background-color: #FF69B4;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-size: 1em;
+}
+
+#letter, #poem, #fortune, .good-things {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 25px;
+    border-radius: 15px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    max-width: 600px;
+    margin: 20px auto;
+    line-height: 1.6;
+    animation: fadeIn 1s ease-in;
+    z-index: 1;
+    position: relative;
+}
+#letter, #poem, #fortune { display: none; }
+.good-things { display: block; }
+
+.good-things p {
+    font-size: 1.3em;
+    margin: 12px 0;
+    z-index: 1;
+    position: relative;
+}
+
+.jar {
+    width: 250px;
+    height: 250px;
+    position: relative;
+    margin: 20px auto;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 5px solid #C71585;
+    z-index: 0;
+}
+
+#poem-jar {
+    background: url('https://media1.giphy.com/media/1g29NOjhPNDd6mT9lK/giphy.gif') no-repeat center/cover;
+}
+
+#fortune-jar {
+    background: url('https://media2.giphy.com/media/l0G16t79ORwuWda7K/giphy.gif') no-repeat center/cover;
+}
+
+.paper {
+    width: 20px;
+    height: 10px;
+    background: #FFFACD;
+    position: absolute;
+    animation: shuffle 2s infinite;
+    z-index: 0;
+}
+
+@keyframes shuffle {
+    0% { transform: translate(0, 0) rotate(0deg); }
+    50% { transform: translate(50px, -30px) rotate(180deg); }
+    100% { transform: translate(0, 0) rotate(360deg); }
+}
+
+.decorative, .panda {
+    width: 250px;
+    height: 250px;
+    margin: 20px auto;
+    display: block;
+    z-index: 0;
+}
+.decorative {
+    position: absolute;
+    z-index: -1;
+}
+.panda { display: none; }
+.rainbow { top: -50px; left: -50px; animation: float 5s ease-in-out infinite; }
+.hello-kitty { top: -50px; right: -50px; animation: bounce 2.5s ease-in-out infinite; }
+.white-cat { bottom: -50px; left: -50px; animation: sway 4s ease-in-out infinite; }
+.white-camel { bottom: -50px; right: -50px; animation: walk 7s linear infinite; }
+
+@keyframes float {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-30px); }
+}
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-15px) scale(1.1); }
+}
+@keyframes sway {
+    0%, 100% { transform: translateX(0); }
+    50% { transform: translateX(15px); }
+}
+@keyframes walk {
+    0% { transform: translateX(0); }
+    50% { transform: translateX(30px); }
+    100% { transform: translateX(0); }
+}
+
+.pop {
+    animation: pop 0.3s ease;
+}
+@keyframes pop {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.2); }
+    100% { transform: scale(1); }
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@media (max-width: 600px) {
+    .container { padding: 15px; }
+    h1 { font-size: 2.5em; }
+    h2 { font-size: 1.8em; }
+    .intro { font-size: 20px; }
+    .photo { width: 250px; height: 250px; }
+    .jar, .panda, .decorative { width: 100px; height: 100px; }
+    .mood-button, #poem-button, .fortune-card { padding: 8px 16px; font-size: 0.9em; }
+    .good-things p { font-size: 1em; }
+    .rainbow { top: -20px; left: -20px; }
+    .hello-kitty { top: -20px; right: -20px; }
+    .white-cat { bottom: -20px; left: -20px; }
+    .white-camel { bottom: -20px; right: -20px; }
+    #letter, #poem, #fortune { font-size: 0.85em; }
+    section { padding: 25px; margin: 15px auto; }
+}

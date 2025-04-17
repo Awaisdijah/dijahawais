@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letters & Poems for Khadijah</title>
+    <link href="https://fonts.googleapis.com/css2?family=Great_Vibes&family=Dancing_Script&display=swap" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+</head>
+<body>
+    <iframe id="bgMusic" width="0" height="0" scrolling="no" frameborder="no" allow="autoplay" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/tracks/1741350560&color=%23ff5500&auto_play=true&hide_related=true&show_comments=false&show_user=true&show_reposts=false"></iframe>
+    <button id="musicToggle">Pause Music</button>
+    <div class="container">
+        <!-- Intro Message -->
+        <p class="intro">Khadijah, my heart, this is for you. Love, Awais</p>
+
+        <!-- Love Letters Section -->
+        <section>
+            <h1>For My Dearest Khadijah</h1>
+            <div class="decorative rainbow">
+                <img src="https://media1.giphy.com/media/SKGo6OYe24EBG/giphy.gif" alt="Rainbow">
+            </div>
+            <div class="decorative hello-kitty">
+                <img src="https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif" alt="Hello Kitty">
+            </div>
+            <img src="https://i.postimg.cc/T3PtJWpQ/IMG-5259.webp" alt="Khadijah" class="photo">
+            <p>Pick how you're feeling, and I'll share a special note just for you.</p>
+            <div class="mood-buttons">
+                <button class="mood-button" onclick="showLetter('happy')">I'm Feeling Happy</button>
+                <button class="mood-button" onclick="showLetter('sad')">I'm Feeling Sad</button>
+                <button class="mood-button" onclick="showLetter('angry')">I'm Feeling Angry</button>
+                <button class="mood-button" onclick="showLetter('other')">I'm Feeling Other</button>
+            </div>
+            <div id="letter"></div>
+        </section>
+
+        <!-- Good Things About Khadijah -->
+        <section class="good-things">
+            <h2>To the Best Girl in the World</h2>
+            <div class="decorative white-cat">
+                <img src="https://media1.giphy.com/media/10GN73YGycPXQk/giphy.gif" alt="White Cat">
+            </div>
+            <div class="decorative white-camel">
+                <img src="https://media3.giphy.com/media/fxIcKjLyYDAcqoi65I/giphy.gif" alt="White Camel">
+            </div>
+            <p>Your soul, a constellation, lights the universe with grace, 
+               My heart bows to you, the queen of every space.</p>
+            <p>Your laughter, a melody that dances through the skies, 
+               No star could shine as bright as you in my eyes.</p>
+            <p>Your heart, an ocean, vast and deep with love, 
+               You’re the angel sent to me from heavens above.</p>
+            <p>Your spirit, a flame that burns with radiant glow, 
+               You make the world more beautiful than it could ever know.</p>
+            <p>Your smile, a sunrise, painting life with golden hues, 
+               No dream could rival the perfection that is you.</p>
+            <p>Your grace, a whisper of eternity’s sweet song, 
+               With you, my love, is where my heart belongs.</p>
+            <p>Your essence, a garden where all beauty comes to bloom, 
+               You chase away the shadows, lighting every room.</p>
+            <p>Your eyes, twin galaxies where my soul finds its home, 
+               No wonder greater than you in all the world I roam.</p>
+            <p>Your touch, though far, ignites my heart with fire, 
+               You are my muse, my love, my every deep desire.</p>
+            <p>Your presence, Khadijah, is the magic of my days, 
+               The best girl in the world, forever I’ll sing your praise.</p>
+        </section>
+
+        <!-- Poem for the Day -->
+        <section class="poem-section">
+            <h2>Your Poem for the Day</h2>
+            <p>Let the baby panda pick a reason why I love you!</p>
+            <div class="jar" id="poem-jar">
+                <div class="paper" style="top: 20px; left: 30px;"></div>
+                <div class="paper" style="top: 50px; left: 80px;"></div>
+                <div class="paper" style="top: 80px; left: 40px;"></div>
+                <div class="paper" style="top: 30px; left: 100px;"></div>
+            </div>
+            <img class="panda" id="poem-panda" src="https://media.giphy.com/media/4T7e4DmcrP9du/giphy.gif" alt="Dancing Panda">
+            <button id="poem-button" onclick="pickPoem()">Pick a Poem</button>
+            <div id="poem"></div>
+        </section>
+
+        <!-- Fortune Jar -->
+        <section class="fortune-section">
+            <h2>Your Fortune Jar</h2>
+            <p>Choose a card for your daily fortune!</p>
+            <div class="jar" id="fortune-jar">
+                <div class="paper" style="top: 20px; left: 30px;"></div>
+                <div class="paper" style="top: 50px; left: 80px;"></div>
+                <div class="paper" style="top: 80px; left: 40px;"></div>
+                <div class="paper" style="top: 30px; left: 100px;"></div>
+            </div>
+            <img class="panda" id="fortune-panda" src="https://media1.giphy.com/media/1g29NOjhPNDd6mT9lK/giphy.gif" alt="Heart Bear">
+            <div class="fortune-cards">
+                <button class="fortune-card" onclick="pickFortune(1)">Card 1</button>
+                <button class="fortune-card" onclick="pickFortune(2)">Card 2</button>
+                <button class="fortune-card" onclick="pickFortune(3)">Card 3</button>
+                <button class="fortune-card" onclick="pickFortune(4)">Card 4</button>
+                <button class="fortune-card" onclick="pickFortune(5)">Card 5</button>
+                <button class="fortune-card" onclick="pickFortune(6)">Card 6</button>
+            </div>
+            <div id="fortune"></div>
+        </section>
+    </div>
+    <script src="https://w.soundcloud.com/player/api.js"></script>
+</body>
+</html>
